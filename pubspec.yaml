@@ -1,6 +1,7 @@
 name: hyphenator
 description: Hyphenator
-version: 0.0.1
+version: 0.0.2
+author: Nikita Dauhashei <nikita@dauhashei.dev>
 homepage: https://github.com/nikitadol/hyphenator
 
 environment:

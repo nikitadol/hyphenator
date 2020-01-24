@@ -7,7 +7,8 @@ import 'package:hyphenator/src/hyphenator_resource_loader.dart';
 void main() async {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  final resource = await DefaultResourceLoader.load();
+  final resource = await DefaultResourceLoader.load(
+      DefaultResourceLoaderLanguage.enUs, true);
 
   test('patterns', () async {
     final hyphenator = Hyphenator(
