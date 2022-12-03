@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart' show required;
 
 import 'extensions.dart';
 import 'hyphenator_resource_loader.dart';
@@ -35,9 +34,7 @@ class Hyphenator {
     this.hyphenateSymbol = '\u{00AD}',
     this.minWordLength = 5,
     this.minLetterCount = 3,
-  })  : assert(resource != null),
-        assert(hyphenateSymbol != null),
-        assert(minWordLength != null && minWordLength > 0),
+  })  : assert(minWordLength > 0),
         _patterns = resource.patternsStrings
             .map(
               (pattern) => Pattern.from(pattern),

@@ -66,7 +66,6 @@ class DefaultResourceLoader extends ResourceLoader {
   static Future<DefaultResourceLoader> load([
     DefaultResourceLoaderLanguage lang = DefaultResourceLoaderLanguage.enUs,
   ]) async {
-    assert(lang != null);
 
     return await rootBundle.loadStructuredData(
       'packages/hyphenator/hyphenate_patterns/${lang._fileName}',

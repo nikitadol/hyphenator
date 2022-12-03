@@ -33,8 +33,7 @@ class Pattern extends Object with Comparable<Pattern> {
   }
 
   Pattern(this._pattern)
-      : assert(_pattern != null),
-        _levels = const [];
+      : _levels = const [];
 
   final String _pattern;
   final List<int?> _levels;
