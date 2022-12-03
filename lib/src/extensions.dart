@@ -3,7 +3,7 @@ extension StringIsDigit on String {
 }
 
 extension StringAsInt on String {
-  int get asInt => int.tryParse(this);
+  int? get asInt => int.tryParse(this);
 }
 
 extension StringIsLetter on String {

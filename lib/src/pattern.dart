@@ -7,7 +7,7 @@ class Pattern extends Object with Comparable<Pattern> {
   );
 
   factory Pattern.from(String pattern) {
-    final levels = List<int>();
+    final levels = <int?>[];
     final result = StringBuffer();
 
     bool waitDigit = true;
@@ -33,15 +33,14 @@ class Pattern extends Object with Comparable<Pattern> {
   }
 
   Pattern(this._pattern)
-      : assert(_pattern != null),
-        _levels = const [];
+      : _levels = const [];
 
   final String _pattern;
-  final List<int> _levels;
+  final List<int?> _levels;
 
   int get levelsCount => _levels.length;
 
-  int levelByIndex(int index) => _levels[index];
+  int? levelByIndex(int index) => _levels[index];
 
   @override
   String toString() => 'Pattern{'

@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart' show required;
 
 import 'extensions.dart';
 import 'hyphenator_resource_loader.dart';
@@ -31,13 +30,11 @@ List<int> _createExceptionMask(String exc) {
 
 class Hyphenator {
   Hyphenator({
-    @required ResourceLoader resource,
+    required ResourceLoader resource,
     this.hyphenateSymbol = '\u{00AD}',
     this.minWordLength = 5,
     this.minLetterCount = 3,
-  })  : assert(resource != null),
-        assert(hyphenateSymbol != null),
-        assert(minWordLength != null && minWordLength > 0),
+  })  : assert(minWordLength > 0),
         _patterns = resource.patternsStrings
             .map(
               (pattern) => Pattern.from(pattern),
@@ -88,7 +85,7 @@ class Hyphenator {
 
     final word = inputWord.toLowerCase();
 
-    List<int> hyphenationMask;
+    List<int>? hyphenationMask;
 
     if (_exceptions.containsKey(word))
       hyphenationMask = _exceptions[word];
@@ -99,6 +96,24 @@ class Hyphenator {
     }
 
     return _hyphenateByMask(inputWord, hyphenationMask);
+  }
+
+  List<String> hyphenateWordToList(String inputWord) {
+    if (_isNotNeedHyphenate(inputWord)) return <String>[inputWord];
+
+    final word = inputWord.toLowerCase();
+
+    List<int>? hyphenationMask;
+
+    if (_exceptions.containsKey(word))
+      hyphenationMask = _exceptions[word];
+    else {
+      final levels = _generateLevelsForWord(word);
+      hyphenationMask = _hyphenatedMaskFromLevels(levels);
+      _correctHyphenationMask(hyphenationMask);
+    }
+
+    return _hyphenateByMaskToList(inputWord, hyphenationMask);
   }
 
   List<int> _generateLevelsForWord(String word) {
@@ -125,7 +140,7 @@ class Hyphenator {
           for (int levelIndex = 0;
               levelIndex < _patterns[patternIndex].levelsCount - 1;
               ++levelIndex) {
-            int level = _patterns[patternIndex].levelByIndex(levelIndex);
+            int level = _patterns[patternIndex].levelByIndex(levelIndex)!;
 
             if (level > levels[i + levelIndex]) levels[i + levelIndex] = level;
           }
@@ -165,13 +180,29 @@ class Hyphenator {
     }
   }
 
-  String _hyphenateByMask(String word, List<int> mask) {
+  String _hyphenateByMask(String word, List<int>? mask) {
     var result = StringBuffer();
     for (int i = 0; i < word.length; i++) {
-      if (mask[i] > 0) result.write(hyphenateSymbol);
+      if (mask![i] > 0) result.write(hyphenateSymbol);
       result.write(word[i]);
     }
     return result.toString();
+  }
+
+  List<String> _hyphenateByMaskToList(String word, List<int>? mask) {
+    StringBuffer currentSyllable = StringBuffer();
+    List<String> returnList = <String>[];
+
+    for (int i = 0; i < word.length; i++) {
+      if (mask![i] > 0) {
+        returnList.add(currentSyllable.toString());
+        currentSyllable.clear();
+      }
+      currentSyllable.write(word[i]);
+    }
+
+    returnList.add(currentSyllable.toString());
+    return returnList;
   }
 
   bool _isNotNeedHyphenate(String input) => input.length < minWordLength;
