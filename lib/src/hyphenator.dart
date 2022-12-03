@@ -98,6 +98,24 @@ class Hyphenator {
     return _hyphenateByMask(inputWord, hyphenationMask);
   }
 
+  List<String> hyphenateWordToList(String inputWord) {
+    if (_isNotNeedHyphenate(inputWord)) return <String>[inputWord];
+
+    final word = inputWord.toLowerCase();
+
+    List<int>? hyphenationMask;
+
+    if (_exceptions.containsKey(word))
+      hyphenationMask = _exceptions[word];
+    else {
+      final levels = _generateLevelsForWord(word);
+      hyphenationMask = _hyphenatedMaskFromLevels(levels);
+      _correctHyphenationMask(hyphenationMask);
+    }
+
+    return _hyphenateByMaskToList(inputWord, hyphenationMask);
+  }
+
   List<int> _generateLevelsForWord(String word) {
     final wordString = '$_startEndMarker$word$_startEndMarker';
 
@@ -169,6 +187,22 @@ class Hyphenator {
       result.write(word[i]);
     }
     return result.toString();
+  }
+
+  List<String> _hyphenateByMaskToList(String word, List<int>? mask) {
+    StringBuffer currentSyllable = StringBuffer();
+    List<String> returnList = <String>[];
+
+    for (int i = 0; i < word.length; i++) {
+      if (mask![i] > 0) {
+        returnList.add(currentSyllable.toString());
+        currentSyllable.clear();
+      }
+      currentSyllable.write(word[i]);
+    }
+
+    returnList.add(currentSyllable.toString());
+    return returnList;
   }
 
   bool _isNotNeedHyphenate(String input) => input.length < minWordLength;
