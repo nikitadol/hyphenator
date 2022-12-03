@@ -7,7 +7,7 @@ class Pattern extends Object with Comparable<Pattern> {
   );
 
   factory Pattern.from(String pattern) {
-    final levels = List<int>();
+    final levels = <int>[];
     final result = StringBuffer();
 
     bool waitDigit = true;

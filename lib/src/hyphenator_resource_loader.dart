@@ -1,4 +1,3 @@
-import 'dart:ui' show hashValues;
 
 import 'package:flutter/foundation.dart' show listEquals;
 import 'package:flutter/services.dart' show rootBundle;
@@ -47,7 +46,7 @@ class DefaultResourceLoader extends ResourceLoader {
           );
 
   @override
-  int get hashCode => hashValues(
+  int get hashCode => Object.hash(
         _exceptions,
         _patterns,
       );

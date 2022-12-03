@@ -2,7 +2,6 @@ import 'dart:math' as Math show min, max;
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hyphenator/hyphenator.dart';
-import 'package:hyphenator/src/hyphenator_resource_loader.dart';
 
 void main() async {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -107,7 +106,7 @@ void main() async {
         to put them in a specific altered state of consciousness and raise the 
         morale of participants.''';
 
-    final stopWatches = List<int>();
+    final stopWatches = <int>[];
 
     for (int i = 0; i < 200; i++) {
       final startNew = Stopwatch()..start();
