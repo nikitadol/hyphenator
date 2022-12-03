@@ -31,6 +31,17 @@ void main() async {
     expect(hyphenator.hyphenateWordToList('disciplines'), <String>['dis', 'ci', 'plines']);
   });
 
+  test('hyphenate word to list, punctuation', () async {
+    final hyphenator = Hyphenator(
+      resource: resource,
+      hyphenateSymbol: '_',
+    );
+
+    expect(hyphenator.hyphenateWordToList('"subdivision"'), <String>['"sub', 'di', 'vi', 'sion"']);
+    expect(hyphenator.hyphenateWordToList('creative...'), <String>['cre', 'ative...']);
+    expect(hyphenator.hyphenateWordToList('disciplines,'), <String>['dis', 'ci', 'plines,']);
+  });
+
   test('exceptions', () async {
     final hyphenator = Hyphenator(
       resource: resource,
