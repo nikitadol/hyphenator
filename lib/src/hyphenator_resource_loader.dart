@@ -1,4 +1,3 @@
-
 import 'package:flutter/foundation.dart' show listEquals;
 import 'package:flutter/services.dart' show rootBundle;
 
@@ -11,6 +10,7 @@ abstract class ResourceLoader {
 enum DefaultResourceLoaderLanguage {
   enUs,
   de1996,
+  da,
 }
 
 /// Files from: https://tug.org/tex-hyphen/
@@ -66,7 +66,6 @@ class DefaultResourceLoader extends ResourceLoader {
   static Future<DefaultResourceLoader> load([
     DefaultResourceLoaderLanguage lang = DefaultResourceLoaderLanguage.enUs,
   ]) async {
-
     return await rootBundle.loadStructuredData(
       'packages/hyphenator/hyphenate_patterns/${lang._fileName}',
       (value) async {
@@ -117,6 +116,8 @@ extension on DefaultResourceLoaderLanguage {
         return _name('en-us');
       case DefaultResourceLoaderLanguage.de1996:
         return _name('de-1996');
+      case DefaultResourceLoaderLanguage.da:
+        return _name('da');
       default:
         throw Exception('Invalid value');
     }
