@@ -11,6 +11,7 @@ enum DefaultResourceLoaderLanguage {
   enUs,
   de1996,
   da,
+  fr,
 }
 
 /// Files from: https://tug.org/tex-hyphen/
@@ -118,6 +119,8 @@ extension on DefaultResourceLoaderLanguage {
         return _name('de-1996');
       case DefaultResourceLoaderLanguage.da:
         return _name('da');
+      case DefaultResourceLoaderLanguage.fr:
+        return _name('fr');
       default:
         throw Exception('Invalid value');
     }
