@@ -1,0 +1,499 @@
+% title: Hyphenation patterns for Modern Greek, monotonic
+% copyright: Copyright (C) 2008-2011 Dimitrios Filippou
+% notice: This file is part of the hyph-utf8 package.
+%     See http://www.hyphenation.org/tex for more information.
+% language:
+%     name: Modern Greek, monotonic spelling
+%     tag: el-monoton
+% version: 5.0
+% authors:
+%   -
+%     name: Dimitrios Filippou
+%     contact: dimitrios.filippou (at) riotinto.com
+% licence:
+%     name: LPPL
+%     url: https://latex-project.org/lppl/
+% hyphenmins:
+%     typesetting:
+%         left: 1
+%         right: 1
+% changes:
+%     - Created:       June 6, 2008
+%     - Last modified: Sept. 12, 2011
+% texlive:
+%     babelname: monogreek
+%     use_old_patterns_comment: Old patterns work in a different way, one-to-one conversion from UTF-8 is not possible.
+%     legacy_patterns: grmhyph5.tex
+%     message: Hyphenation patterns for uni-accent (monotonic) Modern Greek
+%     package: greek
+% ==========================================
+% This file was first created by mechanical translation from
+% GRMhyph5.tex via "elhyph-utf8 -m -c" (version 0.1 by Peter
+% Heslin -- p.j.heslin at durham dot ac dot uk). Some additions
+% were also made by hand.
+%
+% Created by Dimitrios Filippou with some ideas borrowed from
+% Yannis Haralambous, Kostis Dryllerakis and Claudio Beccari.
+% Mojca Miklavec adapted it for the "hyph-utf8" package.
+%
+% These hyphenation patterns are explained in "modern.pdf", which
+% can be found in the "elhyphen" or "hyphenation-greek" package.
+%
+% Documentation in English can be found in: D. Filippou,
+% "Hyphenation patterns for Ancient and Modern Greek," in
+% "TeX, XML, and Digital Typography" (A. Syropoulos et al.,
+% eds.), Lecture Notes in Computer Science 3130, Springer-Verlag
+% Berlin-Heidelberg, 2004. ISBN 3-540-22801-2.
+%
+\patterns{%
+%%%% vowels
+%-- Vowel patterns (pre-combined)
+Î±1 Îµ1 Î·1 Î¹1 Î¿1 Ï…1 Ï‰1 ÏŠ1 Ï‹1 Î¬1 Î­1 Î®1 Î¯1 ÏŒ1 Ï1 ÏŽ1 Î1 Î°1
+%%%% double vowels (formerly called "diphthogs") and exceptions
+Î±2Î¹
+Î±2Î¯ Î±2á½·
+Î¬2Î¹ á½±2Î¹ Î¬2ÏŠ á½±2ÏŠ % 'a3i --- not to be separated: ne-r'aida
+Î±2Ï…
+Î±2Ï Î±2á½»
+Î¬3Ï… á½±3Ï…
+Îµ2Î¹
+Îµ2Î¯ Îµ2á½·
+Î­2Î¹ á½³2Î¹ Î­2ÏŠ á½³2ÏŠ % 'e3i --- not to be separated: to rw-m'ei-ko (one way to pronounce it)
+Îµ2Ï…
+Îµ2Ï Îµ2á½»
+Î­3Ï… á½³3Ï…
+Î·2Ï…
+Î·2Ï Î·2á½»
+Î®3Ï… á½µ3Ï…
+Î¿2Î¹
+Î¿2Î¯ Î¿2á½·
+ÏŒ2Î¹ á½¹2Î¹ ÏŒ2ÏŠ á½¹2ÏŠ % 'o3i --- not to be separated: to ko-r'oido
+Î¿2Ï…
+Î¿2Ï Î¿2á½»
+ÏŒ3Ï… á½¹3Ï…
+Ï…2Î¹
+Ï…2Î¯ Ï…2á½·
+Ï3Î¹ á½»3Î¹
+%%%% diphthogs: two vowels pronounced together in *one* syllable
+%%%% (in some cases, the rules below will not allow the split up
+%%%% of syllables in words like: ka-ko-poi'oc, etc., but, better
+%%%% this than gross mistakes like: qw-ri-'o)
+Î±2Î·
+Î¬3Î·. á½±3Î·.
+Î±2ÏŠ
+Î¬3Î¹. á½±3Î¹.   % ts'a-i
+Î±2Ï‹   % ka"u-m'oc
+Îµ2ÏŠ   % ze"i-mpekikoc
+Îµ2Ï‹   % Ke"u-l'anh
+Î¿2ÎµÎ¹   % ap'oei-de
+Î¿2Î·   % b'oh-ja!
+ÏŒ3Î·. á½¹3Î·.   % ql'o-h al'o-h
+Î¿2ÏŠ
+ÏŒ3Î¹. á½¹3Î¹.   % s'o-i
+%%%%
+Î¹2Î±
+Î¹2Î¬ Î¹2á½±
+Î¹2Îµ
+Î¹2Î­ Î¹2á½³
+Î¹2Î¿
+Î¹2ÏŒ Î¹2á½¹
+Î¿3ÏŠ3ÏŒ Î¿3ÏŠ3á½¹   % pro-"i-'on
+Î¹2Ï‰
+Î¹2ÏŽ Î¹2á½½
+.Î¹3
+.Î¯3 .á½·3
+Î·2Î±
+Î·2Î¬ Î·2á½±
+Î·2Îµ
+Î·2Î­ Î·2á½³
+Î·2Î¿
+Î·2ÏŒ Î·2á½¹
+Î·2Ï‰
+Î·2ÏŽ Î·2á½½
+.Î·3
+.Î®3 .á½µ3
+Ï…2Î±
+Ï…2Î¬ Ï…2á½±
+Ï…2Î¿
+Ï…2ÏŒ Ï…2á½¹
+Ï…2Ï‰
+Ï…2ÏŽ Ï…2á½½
+.Ï…3
+.Ï3 .á½»3
+%%%% consonants at the end of words (including double consnants:
+%%%% gk, mp, nt, tz, ts).
+4Î².
+4Î³.
+4Î³Îº.
+4Î´.
+4Î¶.
+4Î¸.
+4Îº.
+4Î».
+4Î¼.
+4Î¼Ï€.
+4Î½.
+4Î½Ï„.
+4Î¾.
+4Ï€.
+4Ï.
+4Ïƒ. 4Ï².
+4Ï‚.
+4Ï„.
+4Ï„Î¶.
+4Ï„Ïƒ. 4Ï„Ï².
+4Ï„Ï‚.
+4Ï†.
+4Ï‡.
+4Ïˆ.
+%%%% right apostrophe and consonants with right apostrophe
+4' 4Ê¼ 4á¾¿
+4Î²' 4Î²Ê¼ 4Î²á¾¿
+4Î³' 4Î³Ê¼ 4Î³á¾¿
+4Î´' 4Î´Ê¼ 4Î´á¾¿
+4Î¶' 4Î¶Ê¼ 4Î¶á¾¿
+4Î¸' 4Î¸Ê¼ 4Î¸á¾¿
+4Îº' 4ÎºÊ¼ 4Îºá¾¿
+4Î»' 4Î»Ê¼ 4Î»á¾¿
+4Î¼' 4Î¼Ê¼ 4Î¼á¾¿
+4Î¼Ï€' 4Î¼Ï€Ê¼ 4Î¼Ï€á¾¿
+4Î½' 4Î½Ê¼ 4Î½á¾¿
+4Î½Ï„' 4Î½Ï„â€™ 4Î½Ï„á¾¿
+4Î¾' 4Î¾Ê¼ 4Î¾á¾¿
+4Ï€' 4Ï€Ê¼ 4Ï€á¾¿
+4Ï' 4ÏÊ¼ 4Ïá¾¿
+4Ïƒ' 4ÏƒÊ¼ 4Ïƒá¾¿ 4Ï²' 4Ï²Ê¼ 4Ï²á¾¿
+4Ï„' 4Ï„Ê¼ 4Ï„á¾¿
+4Ï„Î¶' 4Ï„Î¶Ê¼ 4Ï„Î¶á¾¿
+4Ï„Ïƒ' 4Ï„ÏƒÊ¼ 4Ï„Ïƒá¾½ 4Ï„Ï²' 4Ï„Ï²Ê¼ 4Ï„Ï²á¾¿
+4Ï†' 4Ï†Ê¼ 4Ï†á¾¿
+4Ï‡' 4Ï‡Ê¼ 4Ï‡á¾¿
+4Ïˆ' 4ÏˆÊ¼ 4Ïˆá¾¿
+%%%% consonants at the beggining of words
+.Î²4
+.Î³4
+.Î´4
+.Î¶4
+.Î¸4
+.Îº4
+.Î»4
+.Î¼4
+.Î½4
+.Î¾4
+.Ï€4
+.Ï4
+.Ïƒ4 .Ï²4
+.Ï„4
+.Ï†4
+.Ï‡4
+.Ïˆ4
+%%%% separable double consonants
+4Î²1Î²
+4Î³1Î³
+4Î´1Î´
+4Î¶1Î¶
+4Î¸1Î¸
+4Îº1Îº
+4Î»1Î»
+4Î¼1Î¼
+4Î½1Î½
+4Ï€1Ï€
+4Ï1Ï
+4Ïƒ1Ïƒ 4Ï²1Ï²
+4Ï„1Ï„
+4Ï†1Ï†
+4Ï‡1Ï‡
+4Ïˆ1Ïˆ
+%%%% other breakable consonant combinations
+4Î²1Î¶
+4Î²1Î¸
+4Î²1Îº
+4Î²1Î¼
+4Î²1Î½
+4Î²1Î¾
+4Î²1Ï€
+4Î²1Ïƒ 4Î²1Ï²
+4Î²1Ï„
+4Î²1Ï†
+4Î²1Ï‡
+4Î²1Ïˆ
+4Î³1Î²
+4Î³1Î¶
+4Î³1Î¸
+4Î³1Î¼
+4Ï5Î³2Î¼   % >'er-gma = 'ergo (arq.)
+4Î³1Î¾
+4Î³1Ï€
+4Î³1Ïƒ 4Î³1Ï²
+4Î³1Ï„
+4Î³1Ï†
+4Î³1Ï‡
+4Î³1Ïˆ
+4Î´1Î²
+4Î´1Î³
+4Î´1Î¶
+4Î´1Î¸
+4Î´1Îº
+4Î´1Î»
+% "dm" --- not separable: dm~hsic = exhm'erwma (arq.)
+% "dn" --- not separable: dnofer'oc = zofer'oc, skotein'oc (arq.)
+%                         Dne'iperoc = potam'oc thc Rws'iac
+4Î´1Î¾
+4Î´1Ï€
+4Î´1Ïƒ 4Î´1Ï²
+4Î´1Ï„
+4Î´1Ï†
+4Î´1Ï‡
+4Î´1Ïˆ
+4Î¶1Î²   % "zb" and "zg" appear in the beggining of Greek words (e.g., in
+4Î¶1Î³   % Andriotes' Lexicon), but they're usually written as "sb" and "sg".
+4Î¶1Î´
+4Î¶1Î¸
+4Î¶1Îº
+4Î¶1Î»
+4Î¶1Î¼
+Ï„Î¶2Î¼   % m'ana-tzment (m'a-na-tzment)
+4Î¶1Î½
+4Î¶1Î¾
+4Î¶1Ï€
+4Î¶1Ï
+4Î¶1Ïƒ 4Î¶1Ï²
+4Î¶1Ï„
+4Î¶1Ï†
+4Î¶1Ï‡
+4Î¶1Ïˆ
+4Î¸1Î²
+4Î¸1Î³
+4Î¸1Î´
+4Î¸1Î¶
+4Î¸1Îº
+4Î¸1Î¼
+4Ï5Î¸2Î¼   % por-jm'oc
+ÏƒÎ¸2Î¼ Ï²Î¸2Î¼   % i-sjm'oc
+4Î¸1Î¾
+4Î¸1Ï€
+4Î¸1Ïƒ 4Î¸1Ï²
+4Î¸1Ï„
+4Î¸1Ï†
+4Î¸1Ï‡
+4Î¸1Ïˆ
+4Îº1Î²   % "kb" may not be not separable: kb'anto kbantomhqanik'h
+4Îº1Î³
+4Îº1Î´
+4Îº1Î¶
+4Îº1Î¸
+4Îº1Î¼
+4Î»5Îº2Î¼   % Al-km'hnh
+4Ï5Îº2Î¼   % dar-km'a = draqm'h (arq.)
+4Îº1Î¾
+4Îº1Ï€
+4Îº1Ïƒ 4Îº1Ï²
+4Îº1Ï†
+4Î½5Îº2Ï†   % Fran-kfo'urth
+4Îº1Ï‡
+4Îº1Ïˆ
+4Î»1Î²
+4Î»1Î³
+4Î»1Î´
+4Î»1Î¶
+4Î»1Î¸
+4Î»1Îº
+4Î»1Î¼
+4Î»1Î½
+4Î»1Î¾
+4Î»1Ï€
+4Î»1Ï
+4Î»1Ïƒ 4Î»1Ï²
+4Î»1Ï„
+4Î»1Ï†
+4Î»1Ï‡
+4Î»1Ïˆ
+4Î¼1Î²
+4Î¼1Î³
+4Î¼1Î´
+4Î¼1Î¶
+4Î¼1Î¸
+4Î¼1Îº
+4Î¼1Î»
+4Î¼1Î¾
+4Î¼1Ï
+4Î¼1Ïƒ 4Î¼1Ï²
+4Î¼1Ï„
+4Î¼1Ï†
+4Î¼1Ï‡
+4Î¼1Ïˆ
+4Î½1Î²
+4Î½1Î³
+4Î½1Î´
+4Î½1Î¶
+4Î½1Î¸
+4Î½1Îº
+4Î½1Î»
+4Î½1Î¼
+4Î½1Î¾
+4Î½1Ï€
+4Î½1Ï
+4Î½1Ïƒ 4Î½1Ï²
+4Î½1Ï†
+4Î½1Ï‡
+4Î½1Ïˆ
+4Î¾1Î²
+4Î¾1Î³
+4Î¾1Î´
+4Î¾1Î¶
+4Î¾1Î¸
+4Î¾1Îº
+4Î¾1Î»
+4Î¾1Î¼
+4Î¾1Î½
+4Î¾1Ï€
+4Î¾1Ï
+4Î¾1Ïƒ 4Î¾1Ï²
+4Î¾1Ï„
+4Î³5Î¾2Ï„   % el'eg-xte
+4Ï5Î¾2Ï„   % up'ar-xte
+4Î¾1Ï†
+4Î¾1Ï‡
+4Î¾1Ïˆ
+4Ï€1Î²
+4Ï€1Î³
+4Ï€1Î´
+4Ï€1Î¶
+4Ï€1Î¸
+4Ï€1Îº
+4Ï€1Î¼
+4Ï€1Î¾
+4Ï€1Ïƒ 4Ï€1Ï²
+4Ï€1Ï†
+4Ï€1Ï‡
+4Ï€1Ïˆ
+4Ï1Î²
+4Ï1Î³
+4Ï1Î´
+4Ï1Î¶
+4Ï1Î¸
+4Ï1Îº
+4Ï1Î»
+4Ï1Î¼
+4Ï1Î½
+4Ï1Î¾
+4Ï1Ï€
+4Ï1Ïƒ 4Ï1Ï²
+4Ï1Ï„
+4Ï1Ï†
+4Ï1Ï‡
+4Ï1Ïˆ
+4Ïƒ1Î´ 4Ï²1Î´   % "sd" may not be separable: sde'ugla = ze'ugla (arq.)
+4Ïƒ1Î¶ 4Ï²1Î¶
+4Ïƒ1Î½ 4Ï²1Î½   % "sn" may not be separable: sn'iqi (= sb'erkoc) snompism'oc
+4Ïƒ1Î¾ 4Ï²1Î¾
+4Ïƒ1Ï 4Ï²1Ï
+4Ïƒ1Ïˆ 4Ï²1Ïˆ
+4Ï„1Î²
+4Ï„1Î³
+4Ï„1Î´
+4Ï„1Î¸
+4Ï„1Îº
+% "tl" --- not separable: tlhmws'unh = miz'eria (arq.)
+4Ï„1Î½
+4Ï„1Î¾
+4Ï„1Ï€
+4Ï„1Ï†
+ÏƒÏ„2Ï† Ï²Ï„2Ï†   % fa-stfount'adiko Be-stfal'ia (German'ia)
+4Ï„1Ï‡
+4Ï„1Ïˆ
+4Ï†1Î²
+4Ï†1Î³
+4Ï†1Î´
+4Ï†1Î¶
+4Ï†1Îº   % "fk" may not be separable: fki'anw, fkias'idi
+4Ï†1Î¼
+4Ï†1Î½
+4Ï5Ï†2Î½   % or-fn'oc = skotein'oc (arq.)
+4Ï†1Î¾
+4Ï†1Ï€
+4Ï†1Ïƒ 4Ï†1Ï²
+4Ï†1Ï‡
+4Ï†1Ïˆ
+4Ï‡1Î²
+4Ï‡1Î³
+4Ï‡1Î´
+4Ï‡1Î¶
+4Ï‡1Îº
+4Ï‡1Î¼
+4Ï5Ï‡2Î¼   % dar-qm'a = draqm'h (arq.)
+4Ï‡1Î¾
+4Ï‡1Ï€
+4Ï‡1Ïƒ 4Ï‡1Ï²
+4Ï‡1Ï†
+4Ï‡1Ïˆ
+4Ïˆ1Î²
+4Ïˆ1Î³
+4Ïˆ1Î´
+4Ïˆ1Î¶
+4Ïˆ1Î¸
+4Ïˆ1Îº
+4Ïˆ1Î»
+4Ïˆ1Î¼
+4Ïˆ1Î½
+4Ïˆ1Î¾
+4Ïˆ1Ï€
+4Ïˆ1Ï
+4Ïˆ1Ïƒ 4Ïˆ1Ï²
+4Ïˆ1Ï„
+4Î¼5Ïˆ2Ï„   % l'am-yte
+4Ïˆ1Ï†
+4Ïˆ1Ï‡
+%%%% some separable nasal consonant combinations
+4Î³5Îº2Ï†   % Frag-kfo'urth
+4Î³1ÎºÏ„   % eleg-kt'hc
+4Î¼1Ï€Ï„   % 'amem-ptoc
+4Î½1Ï„Î¶   % neran-tzi'a
+4Î½1Ï„Ïƒ 4Î½1Ï„Ï²   % biolon-ts'elo
+%%%%
+%%%% some `weird' terminations in words of Greek and non-Greek origin
+%%%%
+4Î²Ï.   % or-nt'ebr
+4Î³Î».   % (od'oc Kar'olou) Ogl (B'oloc)
+4ÎºÎ».   % pi-n'akl
+4ÎºÏ„.   % takt
+4Î³ÎºÏ‚. 4Î³ÎºÏ².   % mpagkc (mp'annu)
+4Î³ÎºÏƒ.
+6ÎºÏ‚. 6ÎºÏ².   % tankc
+4ÎºÏƒ.
+4Î»Ï‚. 4Î»Ï².   % balc
+4Î»Ïƒ.
+4Î¼Ï€Î».   % ntampl (pod'osfairo)
+4Î¼Ï€Î½.   % Impn (Sa"'int, arabik'o 'onoma)
+4Î¼Ï€Ï.   % romp-nte-s'ampr
+4Î¼Ï‚. 4Î¼Ï².   % Tz'eimc
+4Î¼Ïƒ.
+4Î½Ï‚. 4Î½Ï².   % 'el-minc ('el-min-joc) tranc
+4Î½Ïƒ.
+4ÏÏ‚. 4ÏÏ².   % (empr'oc) marc
+4ÏÏƒ.
+4ÏƒÎº. 4Ï²Îº.   % Noboros'isk (p'olh thc Rws'iac)
+4ÏƒÏ„. 4Ï²Ï„.   % karst trast
+4Ï„Î».   % Si'atl (p'olh twn HPA)
+4Ï„Ï.   % maitr
+4Î½Ï„Ï‚. 4Î½Ï„Ï².   % (frou'it) pantc Frantc
+4Î½Ï„Ïƒ.
+4Ï†Ï„.   % kriskr'aft
+4Ï‡Ï„.   % B'ermaqt (Germanik'oc Strat'oc)
+%%%%
+%%%% some `weird' double-consonant combinations that may occur in
+%%%% words of non-greek origin like "romp-nte-s'ampr" (= robe de
+%%%% chambre)
+%%%%
+4Î³Îº1Î¼Ï€
+4Î³Îº1Î½Ï„
+4Î³Îº1Ï„Î¶
+4Î³Îº1Ï„Ïƒ 4Î³Îº1Ï„Ï²
+4Î¼Ï€1Î½Ï„
+4Î¼Ï€1Ï„Î¶
+4Î¼Ï€1Ï„Ïƒ 4Î¼Ï€1Ï„Ï²
+4Î½Ï„1Î¼Ï€
+4Ï„Ïƒ1Î³Îº 4Ï„Ï²1Î³Îº
+4Ï„Ïƒ1Î¼Ï€ 4Ï„Ï²1Î¼Ï€
+4Ï„Ïƒ1Î½Ï„ 4Ï„Ï²1Î½Ï„
+}
