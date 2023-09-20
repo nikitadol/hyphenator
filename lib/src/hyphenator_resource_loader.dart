@@ -13,6 +13,22 @@ enum DefaultResourceLoaderLanguage {
   da,
   fr,
   nl,
+  it,
+  bg,
+  cs,
+  el,
+  esES,
+  es419,
+  fi,
+  hu,
+  nb,
+  pl,
+  ptBR,
+  ptPT,
+  ro,
+  ru,
+  sv,
+  tr
 }
 
 /// Files from: https://tug.org/tex-hyphen/
@@ -124,6 +140,39 @@ extension on DefaultResourceLoaderLanguage {
         return _name('fr');
       case DefaultResourceLoaderLanguage.nl:
         return _name('nl');
+      case DefaultResourceLoaderLanguage.it:
+        return _name('it');
+      case DefaultResourceLoaderLanguage.bg:
+        return _name('bg');
+      case DefaultResourceLoaderLanguage.cs:
+        return _name('cs');
+      case DefaultResourceLoaderLanguage.el:
+        return _name('el');
+      case DefaultResourceLoaderLanguage.esES:
+        return _name('es-es');
+      case DefaultResourceLoaderLanguage.es419:
+        return _name('es-419');
+      case DefaultResourceLoaderLanguage.fi:
+        return _name('fi');
+      case DefaultResourceLoaderLanguage.hu:
+        return _name('hu');
+      case DefaultResourceLoaderLanguage.nb:
+        return _name('nb');
+      case DefaultResourceLoaderLanguage.pl:
+        return _name('pl');
+      case DefaultResourceLoaderLanguage.ptBR:
+        return _name('pt-br');
+      case DefaultResourceLoaderLanguage.ptPT:
+        return _name('pt-pt');
+      case DefaultResourceLoaderLanguage.ro:
+        return _name('ro');
+      case DefaultResourceLoaderLanguage.ru:
+        return _name('ru');
+      case DefaultResourceLoaderLanguage.sv:
+        return _name('sv');
+      case DefaultResourceLoaderLanguage.tr:
+        return _name('tr');
+
       default:
         throw Exception('Invalid value');
     }
